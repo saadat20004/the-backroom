@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Backroom at The Winslow | Private Event Space in Gramercy, NYC</title>
+<meta name="description" content="Book The Backroom at The Winslow, a cozy semi-private pub space on East 14th Street for up to 30 guests. Leather booths, your own music, full bar and kitchen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --bg:#140f0b;
+  --wood:#1d1510;
+  --wood-2:#271c15;
+  --line:rgba(201,162,90,.18);
+  --oxblood:#7a2228;
+  --oxblood-2:#94303a;
+  --brass:#c9a25a;
+  --brass-2:#e2c288;
+  --cream:#efe4d0;
+  --muted:#b5a690;
+  --radius:14px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.12;font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+h2 em,h1 em{font-style:italic;color:var(--brass);font-weight:700}
+:focus-visible{outline:2px solid var(--brass-2);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,92%);margin-inline:auto}
+section{padding:110px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:16px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--brass)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:58ch}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.98rem;border:1px solid transparent;cursor:pointer;transition:transform .3s var(--ease),background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),box-shadow .3s var(--ease)}
+.btn-primary{background:var(--brass);color:#1a120c}
+.btn-primary:hover{background:var(--brass-2);transform:translateY(-2px);box-shadow:0 10px 26px rgba(201,162,90,.3)}
+.btn-ghost{border-color:rgba(239,228,208,.35);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass);transform:translateY(-2px)}
+.btn i{transition:transform .3s var(--ease)}
+.btn:hover i.fa-arrow-right{transform:translateX(4px)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s var(--ease),box-shadow .4s var(--ease),padding .4s var(--ease);padding:20px 0}
+.nav.scrolled{background:rgba(20,15,11,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:12px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:42px;height:42px;border-radius:50%;border:1px solid var(--brass);display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:800;color:var(--brass);font-size:1.15rem}
+.brand-text strong{display:block;font-family:'Playfair Display',serif;font-size:1.15rem;line-height:1}
+.brand-text span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{font-size:.94rem;color:var(--muted);position:relative;padding:6px 0;transition:color .3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav-links a:hover,.nav-links a.active{color:var(--cream)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav .btn{padding:11px 22px}
+.burger{display:none;background:none;border:1px solid var(--line);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:140px 0 60px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 14s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,15,11,.55) 0%,rgba(20,15,11,.35) 35%,rgba(20,15,11,.92) 82%,var(--bg) 100%),linear-gradient(90deg,rgba(20,15,11,.75),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:50px;align-items:end}
+.hero h1{font-size:clamp(2.8rem,6.6vw,5.6rem);margin-bottom:22px}
+.hero .lead{color:#d8cbb4;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.rating-chip{display:inline-flex;align-items:center;gap:12px;margin-bottom:26px;padding:8px 16px 8px 8px;border-radius:999px;background:rgba(20,15,11,.55);border:1px solid var(--line);backdrop-filter:blur(8px);font-size:.9rem}
+.rating-chip b{background:var(--brass);color:#1a120c;border-radius:999px;padding:4px 12px;font-weight:700}
+.rating-chip .stars{color:var(--brass);letter-spacing:2px;font-size:.8rem}
+
+.quick{background:rgba(29,21,16,.88);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.quick h3{font-size:1.35rem;margin-bottom:4px}
+.quick p{font-size:.88rem;color:var(--muted);margin-bottom:18px}
+.qf{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.field input,.field select,.field textarea{background:var(--bg);border:1px solid rgba(239,228,208,.14);border-radius:10px;padding:12px 14px;font-size:.96rem;transition:border-color .3s,box-shadow .3s;width:100%}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a25a' stroke-width='1.6' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(201,162,90,.15)}
+input[type=date]::-webkit-calendar-picker-indicator{filter:invert(.75) sepia(1) saturate(3) hue-rotate(5deg);cursor:pointer}
+.quick .btn{width:100%;margin-top:16px}
+
+/* stats */
+.stats{padding:0;margin-top:-1px}
+.stats-row{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,var(--wood-2),var(--wood));overflow:hidden;box-shadow:var(--shadow)}
+.stat{position:relative;padding:30px 16px 26px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;transition:background .35s}
+.stat+.stat::before{content:"";position:absolute;left:0;top:24%;bottom:24%;width:1px;background:var(--line)}
+.stat::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:2px;background:var(--brass);transform:translateX(-50%);transition:width .4s var(--ease)}
+.stat:hover{background:rgba(201,162,90,.05)}
+.stat:hover::after{width:40%}
+.stat i{font-size:1.05rem;color:var(--brass);width:46px;height:46px;border-radius:50%;border:1px solid rgba(201,162,90,.35);display:grid;place-items:center;margin-bottom:6px;transition:transform .4s var(--ease),background .3s,color .3s}
+.stat:hover i{transform:translateY(-3px);background:var(--brass);color:#1a120c}
+.stat b{display:block;font-family:'Outfit',sans-serif;font-weight:700;font-size:1.75rem;line-height:1;letter-spacing:-.01em}
+.stat span{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+/* gallery */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:44px;flex-wrap:wrap}
+.tabs{display:flex;gap:6px;background:var(--wood);border:1px solid var(--line);padding:5px;border-radius:999px}
+.tab{background:none;border:0;padding:10px 20px;border-radius:999px;cursor:pointer;font-size:.9rem;color:var(--muted);transition:background .3s,color .3s}
+.tab:hover{color:var(--cream)}
+.tab.on{background:var(--oxblood);color:var(--cream)}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px}
+.tile{position:relative;overflow:hidden;border-radius:var(--radius);cursor:zoom-in;background:var(--wood-2);border:0;padding:0;transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),filter .5s}
+.tile::after{content:"\f065";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:14px;bottom:14px;width:40px;height:40px;border-radius:50%;background:rgba(20,15,11,.75);color:var(--brass);display:grid;place-items:center;font-size:.9rem;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s var(--ease)}
+.tile:hover img{transform:scale(1.06);filter:brightness(1.08)}
+.tile:hover::after{opacity:1;transform:none}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile.wide{grid-column:span 2}
+.tile.tall{grid-row:span 2}
+.tile.hide{display:none}
+.tile .cap{position:absolute;left:14px;bottom:14px;font-size:.78rem;background:rgba(20,15,11,.75);padding:5px 12px;border-radius:999px;color:var(--cream);opacity:0;transition:opacity .35s}
+.tile:hover .cap{opacity:1}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,7,5,.96);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:88vw;max-height:80vh;border-radius:10px;box-shadow:var(--shadow);transition:opacity .25s}
+.lb-btn{position:absolute;width:52px;height:52px;border-radius:50%;background:rgba(239,228,208,.08);border:1px solid var(--line);cursor:pointer;font-size:1.1rem;transition:background .3s,color .3s}
+.lb-btn:hover{background:var(--brass);color:#1a120c}
+.lb-prev{left:3vw;top:50%;transform:translateY(-50%)}
+.lb-next{right:3vw;top:50%;transform:translateY(-50%)}
+.lb-close{top:24px;right:24px}
+.lb-count{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.9rem;letter-spacing:.1em}
+
+/* space */
+.space{background:var(--wood);border-block:1px solid var(--line)}
+.space-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.space-media{position:relative;height:620px}
+.space-media img{position:absolute;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+.space-media .m1{inset:0 18% 14% 0;width:82%;height:86%}
+.space-media .m2{right:0;bottom:0;width:48%;height:46%;border:6px solid var(--wood)}
+.space-badge{position:absolute;left:24px;bottom:24px;background:var(--oxblood);padding:16px 20px;border-radius:12px;box-shadow:var(--shadow)}
+.space-badge b{font-family:'Playfair Display',serif;font-size:1.8rem;display:block;line-height:1}
+.space-badge span{font-size:.8rem;color:#f0d8d8}
+.space h2{margin-bottom:20px}
+.space .lead{margin-bottom:30px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.feat li{list-style:none;display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:12px;border:1px solid var(--line);background:var(--bg);transition:border-color .3s,transform .35s var(--ease)}
+.feat li:hover{border-color:rgba(201,162,90,.5);transform:translateY(-3px)}
+.feat i{color:var(--brass);font-size:1.05rem;margin-top:4px;width:20px;text-align:center}
+.feat b{display:block;font-size:.98rem}
+.feat span{font-size:.85rem;color:var(--muted);line-height:1.45}
+
+/* occasions */
+.occ{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.occ-card{position:relative;height:360px;border-radius:var(--radius);overflow:hidden;display:flex;align-items:flex-end;padding:24px;cursor:pointer;border:1px solid var(--line)}
+.occ-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s var(--ease)}
+.occ-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 30%,rgba(20,15,11,.95));transition:background .4s}
+.occ-card:hover img{transform:scale(1.07)}
+.occ-card:hover::before{background:linear-gradient(180deg,rgba(122,34,40,.15) 0%,rgba(20,15,11,.97) 80%)}
+.occ-card i{font-size:1.3rem;color:var(--brass);margin-bottom:12px;display:block}
+.occ-card h3{font-size:1.4rem;margin-bottom:6px}
+.occ-card p{font-size:.88rem;color:#d4c6ae;line-height:1.5}
+.occ-card .go{margin-top:14px;font-size:.85rem;color:var(--brass);font-weight:600;display:inline-flex;gap:8px;align-items:center;opacity:.85;transition:gap .3s,opacity .3s}
+.occ-card:hover .go{gap:12px;opacity:1}
+
+/* food drink */
+.fd{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;margin-top:44px}
+.fd-main{position:relative;border-radius:var(--radius);overflow:hidden;min-height:420px;display:flex;align-items:flex-end;padding:34px;border:1px solid var(--line)}
+.fd-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s var(--ease)}
+.fd-main:hover img{transform:scale(1.04)}
+.fd-main::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 20%,rgba(20,15,11,.95))}
+.fd-main h3{font-size:1.9rem;margin-bottom:8px}
+.fd-main p{color:#d4c6ae;max-width:44ch}
+.fd-list{display:grid;gap:14px}
+.fd-item{display:flex;gap:18px;align-items:center;padding:22px;border-radius:var(--radius);background:var(--wood);border:1px solid var(--line);transition:background .3s,border-color .3s}
+.fd-item:hover{background:var(--wood-2);border-color:rgba(201,162,90,.45)}
+.fd-item .ic{width:50px;height:50px;border-radius:12px;display:grid;place-items:center;flex-shrink:0;font-size:1.15rem}
+.fd-item .yes{background:rgba(201,162,90,.12);color:var(--brass)}
+.fd-item .no{background:rgba(148,48,58,.18);color:#e08b92}
+.fd-item b{display:block}
+.fd-item span{font-size:.88rem;color:var(--muted)}
+
+/* reviews */
+.reviews{background:var(--wood);border-block:1px solid var(--line)}
+.rv-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:34px}
+.rv-summary{display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;padding:26px 32px;border-radius:18px;background:var(--bg);border:1px solid var(--line);margin-bottom:22px}
+.rv-score{display:flex;align-items:center;gap:18px;padding-right:34px;border-right:1px solid var(--line)}
+.rv-score b{font-family:'Outfit',sans-serif;font-weight:700;font-size:3.4rem;line-height:1}
+.rv-score .stars{color:var(--brass);font-size:.95rem;letter-spacing:3px}
+.rv-score small{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+.rv-tags{display:flex;flex-wrap:wrap;gap:10px}
+.rv-tags span{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;background:rgba(201,162,90,.08);border:1px solid rgba(201,162,90,.22);font-size:.9rem;color:var(--cream)}
+.rv-tags i{color:var(--brass);font-size:.82rem}
+.rv-reply{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--muted);white-space:nowrap}
+.rv-reply i{width:40px;height:40px;border-radius:50%;background:var(--oxblood);color:var(--cream);display:grid;place-items:center}
+.rv-reply b{display:block;color:var(--cream);font-weight:600}
+.rv-list{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.rv{position:relative;display:flex;flex-direction:column;padding:28px 26px 24px;border-radius:16px;background:var(--bg);border:1px solid var(--line);transition:transform .4s var(--ease),border-color .3s,box-shadow .4s}
+.rv::before{content:"";position:absolute;left:26px;right:26px;top:0;height:2px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.rv:hover{transform:translateY(-5px);border-color:rgba(201,162,90,.4);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.rv:hover::before{transform:scaleX(1)}
+.rv-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.rv-top .stars{color:var(--brass);font-size:.8rem;letter-spacing:2px}
+.rv-top .num{font-size:.85rem;font-weight:600;color:var(--cream);background:var(--wood-2);padding:3px 10px;border-radius:999px}
+.rv p{font-family:'Outfit',sans-serif;font-size:1.06rem;font-weight:400;line-height:1.7;color:#e9dcc4;margin-bottom:22px;flex:1}
+.rv-who{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
+.av{width:44px;height:44px;border-radius:50%;background:var(--oxblood);display:grid;place-items:center;font-weight:600;color:var(--cream);font-size:.88rem;flex-shrink:0}
+.rv-who b{display:block;font-size:.98rem;font-weight:600}
+.rv-who span{font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+.rv-who span i{color:var(--brass);font-size:.75rem}
+.rv-who .av{display:grid;place-items:center;font-size:.88rem;color:var(--cream)}
+
+/* info */
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:44px}
+.card{padding:30px;border-radius:var(--radius);background:var(--wood);border:1px solid var(--line)}
+.card h3{font-size:1.3rem;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.card h3 i{color:var(--brass);font-size:1rem}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:9px 12px;border-radius:8px;font-size:.94rem;color:var(--muted);transition:background .3s}
+.hours li.today{background:rgba(201,162,90,.12);color:var(--cream);font-weight:600}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;background:var(--brass);color:#1a120c;padding:2px 7px;border-radius:999px;vertical-align:middle}
+.check{list-style:none;display:grid;gap:12px}
+.check li{display:flex;gap:12px;font-size:.94rem;color:var(--muted);line-height:1.5}
+.check li i{margin-top:5px;font-size:.85rem;width:16px}
+.check .y i{color:var(--brass)}
+.check .n i{color:#e08b92}
+.loc-map{border-radius:12px;overflow:hidden;height:170px;margin-bottom:16px;border:1px solid var(--line)}
+.loc-map iframe{width:100%;height:100%;border:0;filter:grayscale(.6) sepia(.35) brightness(.8) contrast(1.05)}
+
+/* booking */
+.book-wrap{display:grid;grid-template-columns:1.45fr .9fr;gap:24px;margin-top:44px;align-items:start}
+.book-form{background:var(--wood);border:1px solid var(--line);border-radius:22px;padding:40px;box-shadow:var(--shadow)}
+.steps{display:grid;gap:0}
+.step{padding:28px 0;border-bottom:1px dashed rgba(201,162,90,.18)}
+.step:first-child{padding-top:0}
+.step:last-child{border-bottom:0;padding-bottom:0}
+.step-h{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.step-h .n{width:34px;height:34px;border-radius:10px;background:rgba(201,162,90,.12);border:1px solid rgba(201,162,90,.35);color:var(--brass);display:grid;place-items:center;font-size:.9rem;font-weight:700;flex-shrink:0}
+.step-h b{display:block;font-size:1.08rem;font-weight:600}
+.step-h small{display:block;font-size:.85rem;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.picks{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.pick{position:relative}
+.pick input{position:absolute;opacity:0;pointer-events:none}
+.pick label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:100%;min-height:96px;padding:16px 8px;border-radius:14px;border:1px solid rgba(239,228,208,.12);background:var(--bg);cursor:pointer;font-size:.86rem;font-weight:500;color:var(--muted);text-align:center;line-height:1.25;transition:border-color .3s,background .3s,color .3s,transform .3s var(--ease)}
+.pick label i{font-size:1.25rem;color:var(--brass);transition:transform .35s var(--ease)}
+.pick label:hover{border-color:rgba(201,162,90,.5);color:var(--cream);transform:translateY(-2px)}
+.pick label:hover i{transform:scale(1.12)}
+.pick label::after{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:50%;background:var(--brass);color:#1a120c;font-size:.6rem;display:grid;place-items:center;opacity:0;transform:scale(.5);transition:opacity .3s,transform .3s var(--ease)}
+.pick input:checked+label{border-color:var(--brass);background:rgba(201,162,90,.1);color:var(--cream)}
+.pick input:checked+label::after{opacity:1;transform:none}
+.pick input:focus-visible+label{outline:2px solid var(--brass-2);outline-offset:2px}
+.ctl{position:relative}
+.ctl>i{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--brass);font-size:.9rem;pointer-events:none;opacity:.85}
+.ctl input,.ctl select{padding-left:42px;height:50px}
+.field textarea{resize:vertical;min-height:96px}
+.field input::placeholder,.field textarea::placeholder{color:rgba(181,166,144,.6)}
+.guest-row{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:center;margin-top:18px;padding:18px;border-radius:14px;background:var(--bg);border:1px solid rgba(239,228,208,.08)}
+.stepper{display:flex;align-items:center;background:var(--wood);border:1px solid rgba(239,228,208,.14);border-radius:12px;overflow:hidden}
+.stepper button{width:48px;height:48px;background:none;border:0;cursor:pointer;color:var(--brass);transition:background .3s,color .3s}
+.stepper button:hover{background:var(--brass);color:#1a120c}
+.stepper input{border:0;background:none;text-align:center;flex:1;min-width:0;padding:0;font-weight:700;font-size:1.1rem;-moz-appearance:textfield}
+.stepper input::-webkit-inner-spin-button{-webkit-appearance:none}
+.stepper input:focus{box-shadow:none}
+.cap-bar{height:8px;border-radius:999px;background:rgba(239,228,208,.08);overflow:hidden;margin-bottom:8px}
+.cap-bar span{display:block;height:100%;width:66%;border-radius:999px;background:linear-gradient(90deg,var(--brass),var(--brass-2));transition:width .45s var(--ease)}
+.hint{font-size:.84rem;color:var(--muted)}
+.hint.warn{color:#e8a0a6}
+.err{font-size:.8rem;color:#e8a0a6;display:none}
+.field.bad input,.field.bad select{border-color:#c4545e}
+.field.bad .err{display:block}
+
+.book-side{position:sticky;top:100px;background:var(--wood);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.side-photo{position:relative;height:170px}
+.side-photo img{width:100%;height:100%;object-fit:cover}
+.side-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,21,16,.1),var(--wood))}
+.side-photo div{position:absolute;left:26px;bottom:14px;z-index:1}
+.side-photo h3{font-size:1.5rem}
+.side-photo span{font-size:.84rem;color:var(--muted);display:flex;gap:8px;align-items:center}
+.side-photo span i{color:var(--brass)}
+.side-body{padding:22px 26px 26px}
+.sum{list-style:none;display:grid;margin-bottom:20px;border-radius:14px;background:var(--bg);border:1px solid rgba(239,228,208,.08);padding:4px 16px}
+.sum li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(239,228,208,.07);font-size:.94rem}
+.sum li:last-child{border-bottom:0}
+.sum li span:first-child{color:var(--muted);display:flex;gap:10px;align-items:center}
+.sum li span:first-child i{width:16px;color:var(--brass)}
+.sum li span:last-child{font-weight:600;text-align:right;transition:color .3s}
+.sum li span.empty{color:rgba(181,166,144,.6);font-weight:400}
+.minspend{display:flex;justify-content:space-between;align-items:center;gap:14px;background:linear-gradient(135deg,var(--oxblood),#55171c);border-radius:14px;padding:18px 20px;margin-bottom:18px}
+.minspend small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#f0d0d0;display:block}
+.minspend p{font-size:.82rem;color:#f0d0d0;line-height:1.45;margin-top:2px}
+.minspend b{font-family:'Outfit',sans-serif;font-weight:700;font-size:2rem;color:var(--cream);line-height:1}
+.book-side .btn{width:100%;padding:16px 26px}
+.assure{display:flex;gap:8px;align-items:center;justify-content:center;font-size:.82rem;color:var(--muted);margin-top:12px}
+.assure i{color:var(--brass)}
+.host{display:flex;gap:12px;align-items:center;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.host .av{width:42px;height:42px;background:var(--brass);color:#1a120c}
+.host b{display:block;font-size:.92rem}
+.host span{font-size:.8rem;color:var(--muted)}
+
+.success{display:none;text-align:center;padding:60px 20px}
+.success.show{display:block;animation:fadeUp .6s var(--ease)}
+.success .ok{width:84px;height:84px;border-radius:50%;background:var(--brass);color:#1a120c;display:grid;place-items:center;font-size:2rem;margin:0 auto 22px}
+.success h3{font-size:2rem;margin-bottom:10px}
+.success p{color:var(--muted);max-width:46ch;margin:0 auto 24px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* footer */
+footer{background:#0e0a07;border-top:1px solid var(--line);padding:70px 0 30px}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:50px}
+footer h4{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer li,footer li a{color:var(--muted);font-size:.94rem;transition:color .3s}
+footer li a:hover{color:var(--cream)}
+footer li i{color:var(--brass);width:20px}
+.f-about p{color:var(--muted);font-size:.94rem;margin-top:18px;max-width:34ch}
+.f-bottom{border-top:1px solid var(--line);padding-top:26px;text-align:center;color:var(--muted);font-size:.86rem}
+
+/* sticky mobile cta */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(20,15,11,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 4%;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(100%);transition:transform .4s var(--ease)}
+.mbar.show{transform:none}
+.mbar small{display:block;color:var(--muted);font-size:.75rem}
+.mbar b{font-family:'Playfair Display',serif;font-size:1.2rem}
+.mbar .btn{padding:12px 22px}
+
+/* reveal */
+.rv-up{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv-up.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* responsive */
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr}
+  .quick{max-width:560px}
+  .stats-row{grid-template-columns:repeat(5,1fr)}
+  .stat b{font-size:1.45rem}
+  .stat span{font-size:.68rem;letter-spacing:.08em}
+  .space-grid,.fd{grid-template-columns:1fr}
+  .space-media{height:480px}
+  .rv-list{grid-template-columns:1fr 1fr}
+  .rv-summary{grid-template-columns:1fr;gap:20px}
+  .rv-score{border-right:0;padding-right:0}
+  .book-side{position:static}
+  .picks{grid-template-columns:repeat(5,1fr)}
+  .occ{grid-template-columns:1fr 1fr}
+  .info-grid{grid-template-columns:1fr 1fr}
+  .info-grid .card:last-child{grid-column:1/-1}
+  .book-wrap{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .nav-links{position:fixed;top:0;right:0;height:100vh;width:min(320px,82%);flex-direction:column;background:var(--wood);padding:100px 34px;gap:22px;transform:translateX(100%);transition:transform .45s var(--ease);border-left:1px solid var(--line)}
+  .nav-links.open{transform:none}
+  .nav-links a{font-size:1.15rem}
+  .burger{display:grid;place-items:center;z-index:2}
+  .nav .btn-primary.desk{display:none}
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
+  .mosaic .tile.big{grid-column:span 2}
+  .mbar{display:flex}
+  body{padding-bottom:70px}
+}
+@media (max-width:620px){
+  section{padding:80px 0}
+  body{font-size:16px}
+  .hero{padding-top:120px}
+  .qf,.grid2,.grid3,.feat,.rv-list,.occ,.info-grid,.f-grid{grid-template-columns:1fr}
+  .info-grid .card:last-child{grid-column:auto}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .stat{padding:22px 12px;border-bottom:1px solid var(--line)}
+  .stat+.stat::before{display:none}
+  .stat:nth-child(odd){border-right:1px solid var(--line)}
+  .stat:last-child{grid-column:1/-1;border-bottom:0;border-right:0}
+  .space-media{height:380px}
+  .occ-card{height:280px}
+  .book-form{padding:26px 20px}
+  .side-body{padding:20px}
+  .picks{grid-template-columns:1fr 1fr}
+  .pick:last-child{grid-column:1/-1}
+  .pick label{min-height:80px}
+  .guest-row{grid-template-columns:1fr}
+  .rv-summary{padding:22px}
+  .rv-reply{white-space:normal}
+  .mosaic{grid-auto-rows:150px}
+  .tile.tall{grid-row:span 1}
+  .lb-prev{left:8px}.lb-next{right:8px}
+  .lb-btn{width:44px;height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv-up{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="The Backroom home">
+      <span class="brand-mark">W</span>
+      <span class="brand-text"><strong>The Backroom</strong><span>at The Winslow</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#gallery">Photos</a></li>
+      <li><a href="#space">The Space</a></li>
+      <li><a href="#occasions">Occasions</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#info">Good to Know</a></li>
+      <li><a href="#book">Book</a></li>
+    </ul>
+    <a href="#book" class="btn btn-primary desk">Check Availability</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="https://www.tagvenue.com/resize/5b/72/widen-1680-noupsize;69101-the-backroom-room-enhanced-v1-3070289.jpg" alt="Leather booths and warm lighting inside The Backroom at The Winslow"></div>
+  <div class="wrap hero-grid">
+    <div class="rv-up">
+      <div class="rating-chip"><b>4.8</b><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 24 happy hosts</div>
+      <span class="eyebrow">Gramercy Park, New York City</span>
+      <h1>Your own corner of the pub, <em>made for your people.</em></h1>
+      <p class="lead">A semi-private room tucked behind The Winslow on East 14th Street. Tufted leather booths, dark timber, low warm light, a full bar and your own playlist on the speakers. Room for up to 30 guests.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-primary">Plan Your Event <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#gallery" class="btn btn-ghost"><i class="fa-regular fa-images"></i> See Photos</a>
+      </div>
+    </div>
+    <form class="quick rv-up d2" id="quickForm" novalidate>
+      <h3>Check your date</h3>
+      <p>Takes 10 seconds. We'll carry it into the booking form.</p>
+      <div class="qf">
+        <div class="field full"><label for="qDate">Event date</label><input type="date" id="qDate" required></div>
+        <div class="field"><label for="qGuests">Guests</label>
+          <select id="qGuests">
+            <option value="10">Up to 10</option><option value="15">11 to 15</option><option value="20" selected>16 to 20</option><option value="25">21 to 25</option><option value="30">26 to 30</option>
+          </select></div>
+        <div class="field"><label for="qType">Occasion</label>
+          <select id="qType">
+            <option>Birthday</option><option>Dining party</option><option>Work drinks</option><option>Holiday party</option><option>Other</option>
+          </select></div>
+      </div>
+      <button class="btn btn-primary" type="submit">Continue <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-row rv-up">
+      <div class="stat"><i class="fa-solid fa-users"></i><b>30</b><span>Standing</span></div>
+      <div class="stat"><i class="fa-solid fa-chair"></i><b>30</b><span>Seated</span></div>
+      <div class="stat"><i class="fa-solid fa-receipt"></i><b>$600</b><span>Minimum spend</span></div>
+      <div class="stat"><i class="fa-solid fa-moon"></i><b>4 AM</b><span>Weekend last call</span></div>
+      <div class="stat"><i class="fa-solid fa-star"></i><b>4.8</b><span>Guest rating</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv-up">
+        <span class="eyebrow">Take a look around</span>
+        <h2>Leather, timber <em>and lamplight</em></h2>
+      </div>
+      <div class="tabs rv-up d1" role="tablist" aria-label="Filter photos">
+        <button class="tab on" data-f="all" role="tab" aria-selected="true">All photos</button>
+        <button class="tab" data-f="room" role="tab" aria-selected="false">The Backroom</button>
+        <button class="tab" data-f="venue" role="tab" aria-selected="false">The Winslow</button>
+      </div>
+    </div>
+    <div class="mosaic" id="mosaic"></div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<!-- THE SPACE -->
+<section class="space" id="space">
+  <div class="wrap space-grid">
+    <div class="space-media rv-up">
+      <img class="m1" src="https://www.tagvenue.com/resize/5b/60/widen-1680-noupsize;69101-the-backroom-room.jpg" alt="Booth seating in The Backroom" loading="lazy">
+      <img class="m2" src="https://www.tagvenue.com/resize/7a/cd/widen-1680-noupsize;69101-the-backroom-room-enhanced-v1-3070291.jpg" alt="Detail of The Backroom interior" loading="lazy">
+      <div class="space-badge"><b>Semi private</b><span>Partitioned booths, your own area</span></div>
+    </div>
+    <div>
+      <span class="eyebrow rv-up">The Space</span>
+      <h2 class="rv-up d1">A proper pub room, <em>all to yourselves</em></h2>
+      <p class="lead rv-up d2">A partitioned booth layout gives your group its own secluded area while the buzz of the pub carries on next door. Deep tufted leather, damask walls and a polished wooden floor set a relaxed tone for seated catch ups or easy mingling.</p>
+      <ul class="feat">
+        <li class="rv-up d1"><i class="fa-solid fa-couch"></i><div><b>Tufted leather booths</b><span>Comfortable seating for the whole group</span></div></li>
+        <li class="rv-up d2"><i class="fa-solid fa-volume-high"></i><div><b>In room PA system</b><span>Plug in your playlist or a small live set</span></div></li>
+        <li class="rv-up d1"><i class="fa-solid fa-tv"></i><div><b>Flatscreen TV</b><span>Slideshows, the game or a birthday reel</span></div></li>
+        <li class="rv-up d2"><i class="fa-solid fa-wifi"></i><div><b>Free Wi Fi</b><span>Plus natural light from the windows</span></div></li>
+        <li class="rv-up d1"><i class="fa-solid fa-wheelchair"></i><div><b>Step free access</b><span>Accessible toilets on site</span></div></li>
+        <li class="rv-up d2"><i class="fa-solid fa-box-archive"></i><div><b>Storage space</b><span>Somewhere safe for coats and gifts</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- OCCASIONS -->
+<section id="occasions">
+  <div class="wrap">
+    <div class="rv-up">
+      <span class="eyebrow">Perfect for</span>
+      <h2>What people <em>celebrate here</em></h2>
+    </div>
+    <div class="occ">
+      <a href="#book" class="occ-card rv-up" data-type="Birthday">
+        <img src="https://www.tagvenue.com/resize/97/31/widen-1680-noupsize;69101-the-backroom-room.jpg" alt="" loading="lazy">
+        <div><i class="fa-solid fa-cake-candles"></i><h3>Birthdays</h3><p>The most booked occasion. 20 to 30 friends, your music, a bar on hand.</p><span class="go">Book a birthday <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+      <a href="#book" class="occ-card rv-up d1" data-type="Dining party">
+        <img src="https://www.tagvenue.com/resize/67/a8/widen-1680-noupsize;35902-the-winslow-venue-enhanced-v1-3070307.jpg" alt="" loading="lazy">
+        <div><i class="fa-solid fa-utensils"></i><h3>Dining parties</h3><p>Sit down meals from the in house kitchen for up to 30 guests.</p><span class="go">Book a dinner <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+      <a href="#book" class="occ-card rv-up d2" data-type="Work drinks">
+        <img src="https://www.tagvenue.com/resize/a6/2e/widen-1680-noupsize;35902-the-winslow-venue.jpg" alt="" loading="lazy">
+        <div><i class="fa-solid fa-briefcase"></i><h3>Work drinks</h3><p>Team socials and after work rounds without the shouting over crowds.</p><span class="go">Book team drinks <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+      <a href="#book" class="occ-card rv-up d3" data-type="Holiday party">
+        <img src="https://www.tagvenue.com/resize/c1/4c/widen-1680-noupsize;35902-the-winslow-venue.jpg" alt="" loading="lazy">
+        <div><i class="fa-solid fa-champagne-glasses"></i><h3>Holiday parties</h3><p>A dedicated holiday menu makes year end gatherings easy to plan.</p><span class="go">Book a holiday party <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD & DRINK -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="rv-up">
+      <span class="eyebrow">Food and drink</span>
+      <h2>The kitchen and bar <em>handle it all</em></h2>
+    </div>
+    <div class="fd">
+      <div class="fd-main rv-up">
+        <img src="https://www.tagvenue.com/resize/5c/97/widen-1680-noupsize;35902-the-winslow-venue.jpg" alt="The bar at The Winslow" loading="lazy">
+        <div><h3>One spend, everything sorted</h3><p>Your minimum spend goes on food and drinks from The Winslow's main, drinks and holiday menus. No hire fee, no hidden extras, tax already included.</p></div>
+      </div>
+      <div class="fd-list">
+        <div class="fd-item rv-up d1"><span class="ic yes"><i class="fa-solid fa-burger"></i></span><div><b>In house catering</b><span>The team organises food to suit your group</span></div></div>
+        <div class="fd-item rv-up d2"><span class="ic yes"><i class="fa-solid fa-martini-glass-citrus"></i></span><div><b>Full bar service</b><span>Drinks served late, licensed until 4 AM</span></div></div>
+        <div class="fd-item rv-up d3"><span class="ic yes"><i class="fa-solid fa-gifts"></i></span><div><b>Holiday menu</b><span>Seasonal options for festive bookings</span></div></div>
+        <div class="fd-item rv-up d4"><span class="ic no"><i class="fa-solid fa-ban"></i></span><div><b>No outside food or BYO</b><span>External catering and own alcohol not allowed</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rv-head rv-up">
+      <div>
+        <span class="eyebrow">Guest stories</span>
+        <h2>Cozy rooms, <em>great service</em></h2>
+      </div>
+    </div>
+    <div class="rv-summary rv-up d1">
+      <div class="rv-score">
+        <b>4.8</b>
+        <div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><small>from 24 event reviews</small></div>
+      </div>
+      <div class="rv-tags">
+        <span><i class="fa-solid fa-mug-hot"></i> Cozy space</span>
+        <span><i class="fa-solid fa-user-check"></i> Attentive staff</span>
+        <span><i class="fa-solid fa-utensils"></i> Good food and drinks</span>
+        <span><i class="fa-solid fa-face-smile"></i> Laid back vibe</span>
+      </div>
+      <div class="rv-reply"><i class="fa-solid fa-bolt"></i><div><b>Replies in 1 hour</b>100% response rate</div></div>
+    </div>
+    <div class="rv-list">
+      <article class="rv rv-up"><div class="rv-top"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="num">4.8</span></div><p>"The space was overall super cozy and perfect for my party."</p><div class="rv-who"><span class="av">JR</span><div><b>Jared R.</b><span><i class="fa-solid fa-cake-candles"></i> Birthday, 30 guests</span></div></div></article>
+      <article class="rv rv-up d1"><div class="rv-top"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span><span class="num">4.7</span></div><p>Laid back atmosphere with excellent service all night.</p><div class="rv-who"><span class="av">NZ</span><div><b>Nader Z.</b><span><i class="fa-solid fa-cake-candles"></i> 40th Birthday, 20 guests</span></div></div></article>
+      <article class="rv rv-up d2"><div class="rv-top"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="num">4.9</span></div><p>Attentive staff, great food and great drinks for our dinner.</p><div class="rv-who"><span class="av">MP</span><div><b>Mia P.</b><span><i class="fa-solid fa-utensils"></i> Dining party, 15 guests</span></div></div></article>
+      <article class="rv rv-up d3"><div class="rv-top"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="num">4.9</span></div><p>A really nice space and the staff were excellent.</p><div class="rv-who"><span class="av">JL</span><div><b>Jordan L.</b><span><i class="fa-solid fa-cake-candles"></i> Birthday, 25 guests</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- GOOD TO KNOW -->
+<section id="info">
+  <div class="wrap">
+    <div class="rv-up">
+      <span class="eyebrow">Good to know</span>
+      <h2>Before you <em>book</em></h2>
+    </div>
+    <div class="info-grid">
+      <div class="card rv-up">
+        <h3><i class="fa-regular fa-clock"></i> Opening hours</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>4 PM to 2 AM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>4 PM to 2 AM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>4 PM to 2 AM</span></li>
+          <li data-d="4"><span>Thursday</span><span>4 PM to 3 AM</span></li>
+          <li data-d="5"><span>Friday</span><span>4 PM to 4 AM</span></li>
+          <li data-d="6"><span>Saturday</span><span>12 PM to 4 AM</span></li>
+          <li data-d="0"><span>Sunday</span><span>12 PM to 3 AM</span></li>
+        </ul>
+      </div>
+      <div class="card rv-up d1">
+        <h3><i class="fa-solid fa-list-check"></i> House rules</h3>
+        <ul class="check">
+          <li class="y"><i class="fa-solid fa-check"></i>Play your own music, no noise limits</li>
+          <li class="y"><i class="fa-solid fa-check"></i>$600 minimum spend any day, tax included</li>
+          <li class="y"><i class="fa-solid fa-check"></i>Paid parking available nearby</li>
+          <li class="n"><i class="fa-solid fa-xmark"></i>No outside DJs</li>
+          <li class="n"><i class="fa-solid fa-xmark"></i>No ticketed or promoted events</li>
+          <li class="n"><i class="fa-solid fa-xmark"></i>No projector or air conditioning</li>
+        </ul>
+      </div>
+      <div class="card rv-up d2">
+        <h3><i class="fa-solid fa-location-dot"></i> Find us</h3>
+        <div class="loc-map"><iframe title="Map of The Winslow" loading="lazy" src="https://www.google.com/maps?q=243+East+14th+Street,+New+York,+NY+10003&output=embed"></iframe></div>
+        <ul class="check">
+          <li class="y"><i class="fa-solid fa-map-pin"></i>243 East 14th Street, New York, NY 10003</li>
+          <li class="y"><i class="fa-solid fa-train-subway"></i>Steps from the 3 Av L station</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="book" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv-up">
+      <span class="eyebrow">Request to book</span>
+      <h2>Reserve <em>The Backroom</em></h2>
+      <p class="lead">Send your details and the host will confirm availability, usually within the hour. No payment is taken now.</p>
+    </div>
+
+    <div class="book-wrap rv-up d1" id="bookWrap">
+      <form class="book-form" id="bookForm" novalidate>
+        <div class="steps">
+          <div class="step">
+            <div class="step-h"><span class="n">1</span><div><b>What's the occasion?</b><small>Pick the one that fits best</small></div></div>
+            <div class="picks" id="typeChips">
+              <div class="pick"><input type="radio" name="type" id="t1" value="Birthday" checked><label for="t1"><i class="fa-solid fa-cake-candles"></i>Birthday</label></div>
+              <div class="pick"><input type="radio" name="type" id="t2" value="Dining party"><label for="t2"><i class="fa-solid fa-utensils"></i>Dining party</label></div>
+              <div class="pick"><input type="radio" name="type" id="t3" value="Work drinks"><label for="t3"><i class="fa-solid fa-briefcase"></i>Work drinks</label></div>
+              <div class="pick"><input type="radio" name="type" id="t4" value="Holiday party"><label for="t4"><i class="fa-solid fa-champagne-glasses"></i>Holiday party</label></div>
+              <div class="pick"><input type="radio" name="type" id="t5" value="Other"><label for="t5"><i class="fa-solid fa-star"></i>Something else</label></div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-h"><span class="n">2</span><div><b>When and how many?</b><small>Times follow the pub's opening hours</small></div></div>
+            <div class="grid3">
+              <div class="field" id="fDate"><label for="date">Date</label><div class="ctl"><i class="fa-regular fa-calendar"></i><input type="date" id="date" required></div><span class="err">Please pick a future date</span></div>
+              <div class="field"><label for="start">Start time</label><div class="ctl"><i class="fa-regular fa-clock"></i><select id="start"></select></div></div>
+              <div class="field"><label for="dur">Duration</label><div class="ctl"><i class="fa-solid fa-hourglass-half"></i>
+                <select id="dur"><option value="2">2 hours</option><option value="3" selected>3 hours</option><option value="4">4 hours</option><option value="5">5 hours</option></select></div></div>
+            </div>
+            <div class="guest-row">
+              <div class="field"><label for="guests">Guests</label>
+                <div class="stepper"><button type="button" id="gMinus" aria-label="Fewer guests"><i class="fa-solid fa-minus"></i></button><input id="guests" type="number" min="1" max="30" value="20" aria-label="Number of guests"><button type="button" id="gPlus" aria-label="More guests"><i class="fa-solid fa-plus"></i></button></div>
+              </div>
+              <div>
+                <div class="cap-bar"><span id="capFill"></span></div>
+                <span class="hint" id="gHint">20 of 30 spots filled. Plenty of room.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-h"><span class="n">3</span><div><b>Your details</b><small>So the host can confirm with you</small></div></div>
+            <div class="grid2">
+              <div class="field" id="fName"><label for="name">Full name</label><div class="ctl"><i class="fa-regular fa-user"></i><input id="name" autocomplete="name" placeholder="Jane Smith" required></div><span class="err">Please add your name</span></div>
+              <div class="field" id="fEmail"><label for="email">Email</label><div class="ctl"><i class="fa-regular fa-envelope"></i><input id="email" type="email" autocomplete="email" placeholder="you@email.com" required></div><span class="err">Please add a valid email</span></div>
+              <div class="field"><label for="phone">Phone (optional)</label><div class="ctl"><i class="fa-solid fa-phone"></i><input id="phone" type="tel" autocomplete="tel" placeholder="(212) 555 0123"></div></div>
+              <div class="field"><label for="food">Food</label><div class="ctl"><i class="fa-solid fa-burger"></i>
+                <select id="food"><option>Drinks only</option><option>Bar snacks</option><option>Full dinner</option><option>Not sure yet</option></select></div></div>
+              <div class="field full"><label for="notes">Anything else? (optional)</label><textarea id="notes" rows="3" placeholder="Cake, decorations, dietary needs, playlist plans..."></textarea></div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <aside class="book-side">
+        <div class="side-photo">
+          <img src="https://www.tagvenue.com/resize/af/ac/widen-1680-noupsize;69101-the-backroom-room-enhanced-v1-3070292.jpg" alt="The Backroom" loading="lazy">
+          <div><h3>The Backroom</h3><span><i class="fa-solid fa-location-dot"></i> 243 E 14th St, Gramercy</span></div>
+        </div>
+        <div class="side-body">
+          <ul class="sum">
+            <li><span><i class="fa-solid fa-tag"></i>Occasion</span><span id="sType">Birthday</span></li>
+            <li><span><i class="fa-regular fa-calendar"></i>Date</span><span id="sDate" class="empty">Pick a date</span></li>
+            <li><span><i class="fa-regular fa-clock"></i>Time</span><span id="sTime">7 PM to 10 PM</span></li>
+            <li><span><i class="fa-solid fa-users"></i>Guests</span><span id="sGuests">20</span></li>
+          </ul>
+          <div class="minspend">
+            <div><small>Minimum spend</small><p id="sPer">About $30 per guest, tax included</p></div>
+            <b>$600</b>
+          </div>
+          <button class="btn btn-primary" type="submit" form="bookForm"><i class="fa-regular fa-paper-plane"></i> Send Booking Request</button>
+          <div class="assure"><i class="fa-solid fa-shield-halved"></i> Free to request. Nothing charged today.</div>
+          <div class="host"><span class="av">MT</span><div><b>Hosted by Mark</b><span>Replies in about 1 hour</span></div></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="success" id="success" role="status" aria-live="polite">
+      <div class="ok"><i class="fa-solid fa-check"></i></div>
+      <h3>Request sent!</h3>
+      <p id="successMsg">Mark will be in touch shortly to confirm your date.</p>
+      <button class="btn btn-ghost" id="again"><i class="fa-solid fa-rotate-left"></i> Make another request</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-about">
+        <a href="#top" class="brand"><span class="brand-mark">W</span><span class="brand-text"><strong>The Backroom</strong><span>at The Winslow</span></span></a>
+        <p>A cozy semi-private pub room in Gramercy for birthdays, dinners and get togethers of up to 30.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#gallery">Photos</a></li><li><a href="#space">The Space</a></li><li><a href="#occasions">Occasions</a></li><li><a href="#reviews">Reviews</a></li></ul>
+      </div>
+      <div>
+        <h4>Plan</h4>
+        <ul><li><a href="#info">Opening hours</a></li><li><a href="#info">House rules</a></li><li><a href="#book">Request to book</a></li></ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> 243 East 14th Street, New York, NY 10003</li>
+          <li><i class="fa-solid fa-train-subway"></i> 3 Av L station</li>
+          <li><i class="fa-solid fa-wheelchair"></i> Step free access</li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">&copy; <span id="yr"></span> The Backroom at The Winslow. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <div><small>Minimum spend</small><b>$600 any day</b></div>
+  <a href="#book" class="btn btn-primary">Book Now</a>
+</div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const R = 'https://www.tagvenue.com/resize/';
+
+  /* Gallery data: 13 unique photos, no repeats */
+  const photos = [
+    {u:'5b/72/widen-1680-noupsize;69101-the-backroom-room-enhanced-v1-3070289.jpg',c:'room',s:'big',t:'The Backroom'},
+    {u:'af/ac/widen-1680-noupsize;69101-the-backroom-room-enhanced-v1-3070292.jpg',c:'room',s:'tall',t:'Leather booths'},
+    {u:'5b/60/widen-1680-noupsize;69101-the-backroom-room.jpg',c:'room',s:'',t:'Booth seating'},
+    {u:'97/31/widen-1680-noupsize;69101-the-backroom-room.jpg',c:'room',s:'',t:'Room detail'},
+    {u:'7a/cd/widen-1680-noupsize;69101-the-backroom-room-enhanced-v1-3070291.jpg',c:'room',s:'wide',t:'Warm lighting'},
+    {u:'67/a8/widen-1680-noupsize;35902-the-winslow-venue-enhanced-v1-3070307.jpg',c:'venue',s:'',t:'The Winslow'},
+    {u:'a6/2e/widen-1680-noupsize;35902-the-winslow-venue.jpg',c:'venue',s:'',t:'The pub'},
+    {u:'c1/4c/widen-1680-noupsize;35902-the-winslow-venue.jpg',c:'venue',s:'tall',t:'Around the bar'},
+    {u:'5c/97/widen-1680-noupsize;35902-the-winslow-venue.jpg',c:'venue',s:'wide',t:'The bar'},
+    {u:'46/b0/widen-1680-noupsize;35902-the-winslow-venue-enhanced-v1-3070313.jpg',c:'venue',s:'',t:'Dining area'},
+    {u:'68/33/widen-1680-noupsize;35902-the-winslow-venue.jpg',c:'venue',s:'',t:'Interior'},
+    {u:'a0/87/widen-1680-noupsize;35902-the-winslow-venue.jpg',c:'venue',s:'',t:'Seating'},
+    {u:'f6/c8/widen-1680-noupsize;35902-the-winslow-venue.jpg',c:'venue',s:'wide',t:'The Winslow, East 14th St'}
+  ];
+  const mosaic = $('#mosaic');
+  photos.forEach((p,i) => {
+    const b = document.createElement('button');
+    b.className = 'tile rv-up ' + p.s;
+    b.dataset.c = p.c; b.dataset.i = i;
+    b.setAttribute('aria-label','Open photo: ' + p.t);
+    b.innerHTML = `<img src="${R+p.u}" alt="${p.t}" loading="lazy"><span class="cap">${p.t}</span>`;
+    mosaic.appendChild(b);
+  });
+
+  /* Filter */
+  let visible = photos.map((_,i)=>i);
+  $$('.tab').forEach(t => t.addEventListener('click', () => {
+    $$('.tab').forEach(x => {x.classList.remove('on'); x.setAttribute('aria-selected','false');});
+    t.classList.add('on'); t.setAttribute('aria-selected','true');
+    const f = t.dataset.f;
+    visible = [];
+    $$('.tile').forEach(el => {
+      const show = f === 'all' || el.dataset.c === f;
+      el.classList.toggle('hide', !show);
+      if (show) { visible.push(+el.dataset.i); el.classList.add('in'); }
+    });
+  }));
+
+  /* Lightbox */
+  const lb = $('#lb'), lbImg = $('#lbImg'), lbCount = $('#lbCount');
+  let pos = 0, lastFocus;
+  const show = () => {
+    const p = photos[visible[pos]];
+    lbImg.style.opacity = 0;
+    setTimeout(() => { lbImg.src = R + p.u; lbImg.alt = p.t; lbImg.style.opacity = 1; }, 150);
+    lbCount.textContent = `${pos+1} / ${visible.length}`;
+  };
+  const open = i => { lastFocus = document.activeElement; pos = visible.indexOf(i); show(); lb.classList.add('open'); document.body.style.overflow='hidden'; $('#lbClose').focus(); };
+  const close = () => { lb.classList.remove('open'); document.body.style.overflow=''; lastFocus && lastFocus.focus(); };
+  const step = d => { pos = (pos + d + visible.length) % visible.length; show(); };
+  mosaic.addEventListener('click', e => { const t = e.target.closest('.tile'); if (t) open(+t.dataset.i); });
+  $('#lbClose').onclick = close; $('#lbPrev').onclick = () => step(-1); $('#lbNext').onclick = () => step(1);
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1);
+  });
+  let tx = 0;
+  lb.addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive:true});
+  lb.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); });
+
+  /* Nav */
+  const nav = $('#nav'), mbar = $('#mbar'), links = $('#navLinks'), burger = $('#burger');
+  const onScroll = () => {
+    nav.classList.toggle('scrolled', scrollY > 40);
+    const book = $('#book').getBoundingClientRect();
+    mbar.classList.toggle('show', scrollY > innerHeight * .7 && (book.top > innerHeight || book.bottom < 0));
+  };
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  burger.onclick = () => {
+    const o = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', o);
+    burger.innerHTML = o ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+  };
+  links.addEventListener('click', e => { if (e.target.tagName === 'A' && links.classList.contains('open')) burger.click(); });
+
+  /* Active section link */
+  const secs = ['gallery','space','occasions','reviews','info','book'].map(id => document.getElementById(id));
+  const navIO = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) $$('.nav-links a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+  }), {rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(s => navIO.observe(s));
+
+  /* Reveal */
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {threshold:.12});
+  $$('.rv-up').forEach(el => io.observe(el));
+
+  /* Today in hours */
+  const today = new Date().getDay();
+  const tli = $(`#hours li[data-d="${today}"]`); if (tli) tli.classList.add('today');
+  $('#yr').textContent = new Date().getFullYear();
+
+  /* Booking logic */
+  const hours = {0:[12,27],1:[16,26],2:[16,26],3:[16,26],4:[16,27],5:[16,28],6:[12,28]}; // close hour past midnight as 24+
+  const fmt = h => { h = h % 24; const ap = h >= 12 ? 'PM' : 'AM'; const x = h % 12 || 12; return x + ' ' + ap; };
+  const pad = n => String(n).padStart(2,'0');
+  const iso = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const minDate = iso(new Date());
+  ['#date','#qDate'].forEach(s => $(s).min = minDate);
+
+  const dateEl = $('#date'), startEl = $('#start'), durEl = $('#dur'), gEl = $('#guests');
+
+  function buildTimes() {
+    const d = dateEl.value ? new Date(dateEl.value + 'T12:00').getDay() : 5;
+    const [o,c] = hours[d];
+    const prev = startEl.value;
+    startEl.innerHTML = '';
+    for (let h = o; h <= c - 2; h++) {
+      const op = document.createElement('option'); op.value = h; op.textContent = fmt(h); startEl.appendChild(op);
+    }
+    const want = prev && [...startEl.options].some(x => x.value === prev) ? prev : (o <= 19 && c - 2 >= 19 ? '19' : startEl.options[0].value);
+    startEl.value = want;
+    fixDur();
+  }
+  function fixDur() {
+    const d = dateEl.value ? new Date(dateEl.value + 'T12:00').getDay() : 5;
+    const c = hours[d][1], s = +startEl.value;
+    [...durEl.options].forEach(op => op.disabled = s + +op.value > c);
+    if (durEl.selectedOptions[0].disabled) { const ok = [...durEl.options].filter(x => !x.disabled).pop(); durEl.value = ok.value; }
+  }
+  function clampG(v) { v = Math.round(+v || 1); return Math.min(30, Math.max(1, v)); }
+  function update() {
+    const type = $('input[name=type]:checked').value;
+    $('#sType').textContent = type;
+    $('#sDate').textContent = dateEl.value ? new Date(dateEl.value + 'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}) : 'Pick a date';
+    $('#sDate').classList.toggle('empty', !dateEl.value);
+    const s = +startEl.value, e = s + +durEl.value;
+    $('#sTime').textContent = `${fmt(s)} to ${fmt(e)}`;
+    const g = clampG(gEl.value);
+    $('#sGuests').textContent = g;
+    $('#sPer').textContent = `About $${Math.ceil(600/g)} per guest, tax included`;
+    $('#capFill').style.width = (g/30*100) + '%';
+    const hint = $('#gHint');
+    if (+gEl.value > 30) { hint.textContent = 'The room holds 30 max. Ask the host about the larger Communal High Top section.'; hint.classList.add('warn'); }
+    else { hint.classList.remove('warn'); hint.textContent = g === 30 ? '30 of 30. The room is at full capacity.' : `${g} of 30 spots filled. ${g >= 25 ? 'A cozy, full room.' : 'Plenty of room.'}`; }
+  }
+  $('#gMinus').onclick = () => { gEl.value = clampG(+gEl.value - 1); update(); };
+  $('#gPlus').onclick = () => { const v = +gEl.value + 1; gEl.value = v > 30 ? 31 : v; update(); gEl.value = clampG(gEl.value); $('#sGuests').textContent = gEl.value; };
+  gEl.addEventListener('change', () => { gEl.value = clampG(gEl.value); update(); });
+  dateEl.addEventListener('change', () => { buildTimes(); update(); $('#fDate').classList.remove('bad'); });
+  startEl.addEventListener('change', () => { fixDur(); update(); });
+  durEl.addEventListener('change', update);
+  $$('input[name=type]').forEach(r => r.addEventListener('change', update));
+
+  const setType = t => { const r = $$('input[name=type]').find(x => x.value === t) || $('#t5'); r.checked = true; update(); };
+  $$('.occ-card').forEach(c => c.addEventListener('click', () => setType(c.dataset.type)));
+
+  /* Quick hero form */
+  $('#quickForm').addEventListener('submit', e => {
+    e.preventDefault();
+    if ($('#qDate').value) { dateEl.value = $('#qDate').value; buildTimes(); }
+    gEl.value = $('#qGuests').value;
+    setType($('#qType').value);
+    $('#book').scrollIntoView({behavior:'smooth'});
+    setTimeout(() => (dateEl.value ? $('#name') : dateEl).focus({preventScroll:true}), 700);
+  });
+
+  /* Submit */
+  $('#bookForm').addEventListener('submit', e => {
+    e.preventDefault();
+    let ok = true, first = null;
+    const chk = (wrap, cond) => { $(wrap).classList.toggle('bad', !cond); if (!cond) { ok = false; first = first || $(wrap).querySelector('input'); } };
+    chk('#fDate', dateEl.value && dateEl.value >= minDate);
+    chk('#fName', $('#name').value.trim().length > 1);
+    chk('#fEmail', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#email').value.trim()));
+    if (!ok) { first.focus(); first.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+    const first_name = $('#name').value.trim().split(' ')[0];
+    $('#successMsg').textContent = `Thanks ${first_name}! Your ${$('#sType').textContent.toLowerCase()} request for ${$('#sDate').textContent}, ${$('#sTime').textContent}, for ${$('#sGuests').textContent} guests is with Mark. Expect a reply at ${$('#email').value.trim()} within about an hour.`;
+    $('#bookWrap').style.display = 'none';
+    $('#success').classList.add('show');
+    $('#success').scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  ['#name','#email'].forEach(s => $(s).addEventListener('input', () => $(s).closest('.field').classList.remove('bad')));
+  $('#again').onclick = () => {
+    $('#bookForm').reset(); gEl.value = 20; $('#success').classList.remove('show'); $('#bookWrap').style.display = '';
+    buildTimes(); update(); $('#book').scrollIntoView({behavior:'smooth'});
+  };
+
+  buildTimes(); update();
+})();
+</script>
+</body>
+</html>
